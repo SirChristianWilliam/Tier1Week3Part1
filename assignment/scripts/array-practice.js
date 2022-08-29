@@ -5,14 +5,16 @@ console.log('--- 1. Practice creating arrays ---');
 // Example: Array of animals
 let animalArray = ['fish', 'cat', 'bird', 'dog'];
 console.log('Animals are: ', animalArray);
-//making sure
-// 1.a. TODO: Make an array with some favorite foods
 
+// 1.a. TODO: Make an array with some favorite foods
+let favFoods = [
+    'fish','cats','birds','dogs','chocolate','protein','fruit'
+]
 
 // 1.b. TODO: Log your array of foods to the console with a message, similar 
 //      to the example above
 
-
+console.log('My favorite foods are: ', favFoods);
 
 // 2. Array.length - tells you how many items are in the array
 console.log('--- 2. Length of an array ---');
@@ -21,7 +23,7 @@ console.log('--- 2. Length of an array ---');
 console.log('Number of animals:', animalArray.length);
 
 // 2.a. TODO: Log to the console the number of foods in your array
-
+console.log("There are",favFoods.length,"food items in my 'favFoods' array list");
 
 // 3. Accessing array items
 console.log('--- 3. Accessing items in an array ---');
@@ -30,15 +32,16 @@ console.log('--- 3. Accessing items in an array ---');
 console.log('First animal is', animalArray[0])
 
 // 3.a. TODO: Log the second animal in the array 
-
+console.log("The second animal in the 'animalArray' array is",animalArray[1] + ",","at index '[1]'");
 
 // 3.b. TODO: Log the last animal in the array using it's array index 
-
+console.log("The last animal in the 'animalArray' array is:",animalArray[3] +",","at \
+index",animalArray.length-1);
 
 // 3.c. (STRETCH) TODO: Log the last animal by using the array length, 
 //      instead of the exact index number of the last item
-
-
+console.log("The last animal in the 'animalArray' array is", animalArray[animalArray.length-1]+",","at \
+index",animalArray.length-1);
 
 // 4. Adding & Removing Array Items
 console.log('--- 4. Adding and removing array items ---');
@@ -48,7 +51,10 @@ animalArray.push('penguin');
 console.log('Added an animal to end,', animalArray);
 
 // 4.a. TODO: Add a new food at the end of your array & log the array
-
+favFoods.push("laundry detergent");
+console.log("I added:",favFoods[favFoods.length-1]+",","to my list of favorite foods, with \
+a new result being:",favFoods);
+console.log("New array length is",favFoods.length);
 
 
 // Example: Remove the last animal by using Array.pop
@@ -59,13 +65,24 @@ console.log('The animals are now', animalArray);
 // 4.b. TODO: Remove the food at the end of your array & 
 //      log both the food removed and the updated array
 
+let removedFood = favFoods.pop();
+console.log("The removed food item:",removedFood);
+console.log("The favFoods array length is once again",favFoods.length,"and is once again",favFoods);
 
 // Example: Add an animal to the beginning using Array.unshift
 animalArray.unshift('walrus');
 console.log(`Added an animal to beginning: ${animalArray}`);
 
 // 4.c. TODO: Add a food at the beginning of the array & log the array
-
+favFoods.unshift("arsenic");
+console.log(`Added one of my favorite foods, ${favFoods[0]}, to the \
+beginning of the 'favFoods' array: ${favFoods}- new length is`,favFoods.length);
+console.log("Here's the array in a more distinct form",favFoods)
+//NEW COMMENT: I kept favFoods.length out of the template literal backticks because the
+// interpolation method to call the variables rendered the number in a less distinct way.
+// This way, the number is blue in the console.
+// Previously, I'd read about interpolation but glossed over it as I didn't fully understand it,
+// but seeing it in action is a nice new tool to have learned. 
 
 // Example: Remove the first animal using Array.shift
 removedAnimal = animalArray.shift();
@@ -74,7 +91,10 @@ console.log('The animals are now', animalArray);
 
 // 4.d TODO: Remove the food at the beginning of your array & 
 //     log both the food removed and the updated array
-
+removedFoods = favFoods.shift();
+console.log(`Removed the first food item in my 'favFoods' array: ${removedFoods}`);
+console.log(`New favFoods array length is ${favFoods.length}`,"(",favFoods.length,")");
+console.log("Updated favFoods array is now",favFoods);
 // 4.e (STRETCH) TODO: Replace the second food in your array
 //      with another one of your favorite foods.
 //      Then log the updated array.
