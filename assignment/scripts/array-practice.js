@@ -95,19 +95,46 @@ removedFoods = favFoods.shift();
 console.log(`Removed the first food item in my 'favFoods' array: ${removedFoods}`);
 console.log(`New favFoods array length is ${favFoods.length}`,"(",favFoods.length,")");
 console.log("Updated favFoods array is now",favFoods);
+
 // 4.e (STRETCH) TODO: Replace the second food in your array
 //      with another one of your favorite foods.
 //      Then log the updated array.
+favFoods[1] = 'hamburger';
+console.log(`favFoods array's previous food item 'cats' is now ${favFoods[1]}`, "\
+and the array looks like this:",favFoods);
 
 // 4.f (STRETCH) TODO: Sort your favoriteFoods array
 //     in reverse alphabetical order. Log the array.
 
+for(let i = favFoods.sort().length-1; i >= 0; i--) {
+       console.log(favFoods[i]);
+}//end of 4.f example 1
+ console.log(favFoods.sort().reverse()); 
+ //end of 4.f example 2
+console.log(["protein","hamburger","fruit","fish","dogs","chocolate","birds"]);//end of 4.f example 3
+ 
+//end 4.f example 2
+
 // 4.g (STRETCH) TODO: Convert your array to a string
 //     putting the word "and" between each item.
 //     eg "tacos and pizza and pasta". Log the string.
+favFoods.toString();
+console.log(favFoods.join(" and ") );
+ 
 
 // 4.h (STRETCH) TODO: Make a new array that combines 
 //     the favorite foods array with the animals array.
 //     Then log the new array.
 //     It should look something like:
 //     ['pizza', 'pasta', 'fish', 'cat', 'bird', 'dog']
+
+const foodAnimals = favFoods.concat(animalArray);
+
+ console.log(foodAnimals); //I included array items from Animals when creating my favorite foods.
+ // Because of this, it looks confusing as there is no clear distinction between the two.
+ // There are ways I could create that distinction of course. I think I'm just going to sort them
+ // though, like the previous example. 
+
+ foodAnimals.sort().reverse();
+ console.log(foodAnimals);
+ //There, at least it looks more organized although practically it's not much use to concatenate the two. 
