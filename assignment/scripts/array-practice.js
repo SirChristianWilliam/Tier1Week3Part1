@@ -110,7 +110,8 @@ for(let i = favFoods.sort().length-1; i >= 0; i--) {
        console.log(favFoods[i]);
 }//end of 4.f example 1
  console.log(favFoods.sort().reverse()); 
- //end of 4.f example 2
+ //end of 4.f example 2. /n
+ 
 console.log(["protein","hamburger","fruit","fish","dogs","chocolate","birds"]);//end of 4.f example 3
  
 //end 4.f example 2
@@ -137,4 +138,4 @@ const foodAnimals = favFoods.concat(animalArray);
 
  foodAnimals.sort().reverse();
  console.log(foodAnimals);
- //There, at least it looks more organized although practically it's not much use to concatenate the two. 
+ //There, at least it looks more organized although practically it's not much use to concatenate the two. /n
